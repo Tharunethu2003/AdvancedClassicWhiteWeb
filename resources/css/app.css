@@ -1,0 +1,29 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+[x-cloak] {
+    display: none;
+}
+
+/* Custom styles */
+.bg-dusty-purple {
+    background-color: #C0A0C0; /* Dusty Purple color */
+}
+
+/* Toggle Circle Movement */
+.toggle-label {
+    position: relative;
+    cursor: pointer;
+}
+
+.toggle-circle {
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: left 0.3s ease; /* Smooth transition */
+}
+
+input:checked + .toggle-label .toggle-circle {
+    left: 24px; /* Moves the circle to the right */
+}
